@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasdf</title>
+    
+    <script>
+        let prev = null;
+        let text1="빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다.";
+        let text2="소설을 제외한 교양서로만 100권";
+        let text3="매일매일 달리기,수영,자전거 연습";
+        let text4="예제 전부 풀어보기";
+        let li = document.getElementsByTagName("li");
+        let div = document.getElementById("comment");
+        
+
+       
+        function over(obj){
+            let li = document.getElementsByTagName("li");
+            let div = document.getElementById("comment");
+            div.style.visibility = "visible";
+            div.style.background = "aliceblue";
+            div.style.left = event.clientX + "px";
+            div.style.top = event.clientY + "px";
+            div.style.width ="300px";
+            div.style.height = "100px";
+            
+            if (obj.id=="li_1"){
+                div.innerHTML = text1;
+                
+            }
+            else if (obj.id=="li_2"){
+                div.innerHTML = text2;
+               
+            }
+            else if (obj.id=="li_3"){
+                div.innerHTML = text3;
+                
+            }
+            else if (obj.id=="li_4"){
+                div.innerHTML = text4;
+               
+            }
+        }
+        function out(obj){
+        
+        let div = document.getElementById("comment");
+            div.style.visibility = "hidden";
+        }
+        
+    </script>
+</head>
+<body onload="makeCursor()">
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul >
+        <li id="li_1" onmouseover="over(this)" onmouseout="out(this)">자전거로 대한민국 일주</li>
+        <li id="li_2" onmouseover="over(this)" onmouseout="out(this)">책 100권 읽기</li>
+        <li id="li_3" onmouseover="over(this)" onmouseout="out(this)">철인 3종 경기 준비</li>
+        <li id="li_4" onmouseover="over(this)" onmouseout="out(this)">자바스크립트 정복</li>
+    </ul>
+    <div id="comment" style="position:absolute;"  ></div>
+</body>
+</html>
