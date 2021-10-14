@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded',() => {
+            let counter = 0
+            const h1 = document.querySelector('h1')
+
+            h1.addEventListener('click',(event) => {
+                counter++
+                h1.textContent = `클릭 횟수: ${counter}`  //왜 '클릭 횟수: ${counter}'는 안되지?
+            })
+        })
+    </script>
+    <style>
+        h1{
+            /*클릭을 여러번 했을 때 글자가 선택되지 않게 만드는 스타일*/
+            user-select:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>클릭 횟수: 0</h1>
+</body>
+</html>
