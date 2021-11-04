@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            const imgList=document.querySelectorALL("div");
+            for(i=0; i<imgList.length; i++){
+                imgList[i].innerHTML = `<img src = 'media/ani${i+1}.png'>`;
+            }
+        });
+        let a="abcd.png";
+        let b = a.replace("cd","efg");
+        document.write(b);
+    </script>
+</head> 
+<body>
+    <div> </div>
+    <div> </div>
+    <div> </div>
+</body>
+</html>
